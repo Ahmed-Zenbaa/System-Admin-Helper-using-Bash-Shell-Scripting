@@ -1,4 +1,5 @@
 # System-Admin-Helper-using-Bash-Shell-Scripting
+***open in raw form for better readability***
 Basic system administration helper concerning users, groups, and passwords.
 ##############################################################
 
