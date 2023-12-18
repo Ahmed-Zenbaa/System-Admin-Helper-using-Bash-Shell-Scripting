@@ -17,8 +17,25 @@ fi
 
 # installing some dependencies to run whiptail and be able to resize the window
 # newt will probably be installed on your system
-dnf -qy install newt &>/dev/null
-dnf -qy install xterm-resize &>/dev/null
+
+# Check the Linux distribution
+if [ -x "$(command -v lsb_release)" ]; then
+    distro=$(lsb_release -si)
+
+    case "$distro" in
+        Ubuntu)
+            sudo apt-get install -y libnewt-dev &>/dev/null
+            sudo apt-get install -y xterm &>/dev/null
+            ;;
+        CentOS)
+            dnf -qy install newt &>/dev/null
+            dnf -qy install xterm-resize &>/dev/null
+            ;;
+        *)
+            exit 1
+            ;;
+    esac
+fi
 
 if (whiptail --title "System Admin Helper" --yesno "Start the Program?" 8 78); then
 	. ./scripts/main-menu.sh
