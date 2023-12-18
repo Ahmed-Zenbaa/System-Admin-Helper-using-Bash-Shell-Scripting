@@ -17,8 +17,8 @@ fi
 
 # installing some dependencies to run whiptail and be able to resize the window
 # newt will probably be installed on your system
-dnf -qy install newt
-dnf -qy install xterm-resize
+dnf -qy install newt &>/dev/null
+dnf -qy install xterm-resize &>/dev/null
 
 if (whiptail --title "System Admin Helper" --yesno "Start the Program?" 8 78); then
 	. ./scripts/main-menu.sh
