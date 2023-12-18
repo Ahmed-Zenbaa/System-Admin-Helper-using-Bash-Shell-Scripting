@@ -8,7 +8,7 @@
 #
 ## make sure you don't alter paths of any scripts in this program without changing their script run path here
 
-eval `resize`
+eval `resize` &>/dev/null
 choice=$(whiptail --title "Main Menu" --ok-button "Select" \
  --cancel-button "Exit" --menu "Choose an option" \
 $LINES $COLUMNS $(( $LINES - 8 )) \
