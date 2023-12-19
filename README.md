@@ -6,6 +6,7 @@
      	     was created by/AHMED ZENBAA
 
 ######################################################################################
+
 Mind the following:
 
 	1)Make sure you make all script files with (.sh) suffix ---> executable.
@@ -14,6 +15,7 @@ Mind the following:
 	4)Don't move or rename any scripts unless you know how to trace and modify them in all scripts.
 
 ######################################################################################
+
 Note the following:
 
 	1)Hope you find this program helpful.
